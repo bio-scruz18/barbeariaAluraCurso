@@ -1,1 +1,0 @@
-Versão final do site criado durante o curso frontend da Alura.
