@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"> <!--p/ adaptar a telas de cel usaremos a tag meta para descobrir o tmanho da tela-->
+
+		<title>Contato - Barbearia Alura</title>
+
+		<link rel="stylesheet" href="reset.css">
+		
+		<link rel="stylesheet" href="style-contato.css">
+
+	</head>
+	
+	<body>
+
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+
+				<nav>
+					<ul>
+						<li>
+							<a href= index2.html>Home</a>
+						</li>
+						<li>
+							<a href= produtos.html>Produtos</a>
+						</li>
+						<li>
+							<a href= contato.html>Contato</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+
+		<main> 
+
+			<form> <!-- criando formulários-->
+				
+				<label for="nomeesobrenome">Nome e sobrenome</label> <!--nome da entrada-->
+				<input type="text" id="nomeesobrenome" class="input-padrao" required>  <!--tipo de infor : entrada/dados fornecidos pelo usuário-->  <!--required para ser obrigatório preencher-->
+
+				<label for="email">E-mail</label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"><!--placeholder para aparecer sugestão/exemplo do que preencher-->
+
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<label for="mensagem">Mensagem</label>
+				<textarea cols="23" rows="10" id="mensagem" class="input-padrao" required></textarea> <!--caixa de texto, para msgs maiores, definindo qtdd de colunas e linhas-->
+
+				<fieldset> <!--tag para um ou mais campos de um dados referentes um tema específico-->
+					<legend>Como prefere o nosso contato?</legend><!--título de um fieldset-->  
+
+					<label for="radio-email"><input type="radio" name="contato" value="radio-email">E-mail</label>
+					  <!--type radio p/ criar opções redondas de selecionar--> <!--colocar todos radio com mesmo name faz todos ficarem juntos e ser possível marcar apenas um-->
+
+					<label for="radio-telefone"><input type="radio" name="contato" value="radio-telefone">Telefone</label>
+					
+					<label for="radio-whatsapp"><input type="radio" name="contato" value="radio-whatsapp" checked>Whatsapp</label><!--checked para ficar pré-marcado-->
+					
+				</fieldset>
+
+				<div>
+					
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select> <!--criar caixinhas para selecionar opção-->
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</div>
+
+				<label class="checkbox"> <input type="checkbox" checked>Gostaria de receber nossas novidades por e-mail?</label> <!--checked para ficar pré-marcado-->
+				
+
+				<input type="submit" value="Enviar formulário" class="enviar"> <!--botão enviar colocar value para o texto do botão-->
+			</form>
+
+			<legend class="horario">Horário de funcionamento</legend>
+			
+			<table> <!--inserindo tabelas, tr é qtdd de linha, td é a qtdd de células-->
+							
+				<thead>
+					<tr>
+						<th>Dia</th>
+						<th>Horário</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Segunda-feira</td>
+						<td>8 ~ 20h</td>
+					</tr>
+					
+					<tr>
+						<td>Quarta-feira</td>
+						<td>8 ~ 20h</td>
+					</tr>
+					
+					<tr>
+						<td>Sexta-feira</td>
+						<td>8 ~ 20h</td>
+					</tr>
+
+					<!--<tr>
+    					<td colspan="2">Escolha e marque!!!</td> /*fazer + uma linha mesclando as colunas*/
+					</tr>-->
+
+				</tbody>
+
+			</table>
+
+		</main>
+
+		<footer>
+
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2021</p>
+
+		</footer>
+
+
+	</body>
+
+</html>

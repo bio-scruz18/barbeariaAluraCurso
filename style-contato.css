@@ -1,0 +1,154 @@
+/*cabeçaho*/
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+ }
+
+nav a:hover {
+	color: #91499E;
+	text-decoration: underline;
+}
+
+/*rodapé*/
+footer {
+ 	color: white;
+ 	text-align: center;
+ 	background: url(bg.jpg);
+ 	padding: 40px 0;
+ }
+
+.copyright {
+ 	color: #CCCCCC;
+ 	font-size: 13px;
+ 	margin: 20px 0 0;
+ }
+
+/*conteúdo principal*/
+main { /*estiliz conteúdo da main*/
+	width: 940px; /*ocupando largura total da página*/
+	margin: 0 auto; /*centralizando*/
+}
+
+form { /*estiliz conteúdo do form*/
+	margin: 40px 0; /*margens*/
+}
+
+form label, form legend { /*estiliz cada label e tbm dos paragrf do meu form*/
+	display: block; /*para cada label ocupar a linha toda, ou o bloco todo*/
+	font-size: 20px; /*tamanho da fonte*/
+	margin: 0 0 10px; /*margem entre a label e o campo abaixo dela*/
+}
+
+
+.input-padrao {/*transformei o anerior neste criando uma classe que vou colocar lá nos radio*/
+	display: block; /*para cada input ocupar a linha toda, ou o bloco todo*/
+	margin: 0 0 20px; /*margem entre a input e o campo abaixo dela*/
+	padding: 10px 25px; /*margem interna 10 px pra cima e baixo e 20 px para os lados*/
+	width: 50%; /*largura do input - 50% da página*/
+}
+
+.checkbox{ /*estilizando apenas elemnto que coloquei class checkbox*/
+	margin: 20px 0; /*margem sup e inf 30px e dir e esq de 0*/
+}
+
+.enviar{
+	width: 40%; /*largura do botão em relação a largura ttl da pág,*/
+	padding: 15px 0; /*preenchimento interno, 15 sup e inf e 0 dir e esq*/
+	background: orange; /*fundo da cor laranja*/
+	color: white; /*fonte da cor branca*/
+	font-weight: bold; /*negrito*/
+	font-size: 18px; /*tamanho da fonte*/
+	border: none; /*tirar toda a borda*/
+	border-radius: 5px; /*arredondar cantos do botão*/
+	transition: 2s all ; /*velocidade de transição (seg) para td (all) o que coloquei no hover, qdo o cursor ficar em cima*/
+	cursor: pointer; /*mudar ícone do cursor para mãozinha de clicar quando passar por cima do elemento*/
+}
+
+.enviar:hover { /*mudaças qdo cursor passar por cima*/
+	background: purple;
+	transform: scale(1.2);  /*transform são animações: aumentar/dim(scale), rotate/rodar), etc...*/
+}
+
+.horario {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+table {
+	margin: 20px 0 40px; /*margem de 20 para cima, 0 para baixo e 40 para os lados*/ 
+}
+
+thead { /*estilz cabeçalho da minha tabela*/
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td , th { /*estiliz as células do body e do cabeçalho da minha tabela*/
+	border: 1px solid #000000; /*borda solida com largura de 1px*/
+	padding: 8px 15px; /*espaç interno de 8 para cima e baixo; 15 para os lados*/
+}
+
+/*adaptando para telas de celular*/
+
+/*@media screen and = está perguntando o tamanho da tela, entre parenteses esta a possível resposta, e entre chaves o que irá mudar se for esta resposta*/
+@media screen and (max-width: 480px) { /*colocamos abaixo apenas os itens que precisma mudar*/
+	.caixa , main , .input-padrao , .enviar {
+        width: auto; /*largura dos itens automatic*/
+    }
+
+    h1 {
+        text-align: center; /*alinhando a logo, que está como h1, centralizada*/
+    }
+
+    nav {
+        position: static; /*colocando o menu de naveg, que está com a tag nav, na sua posição original, que é abaixo da h1*/
+    }
+
+    form {
+    	margin: 20px;
+    }
+
+    .enviar {
+        width: auto; /*largura dos itens automatic*/
+        padding: 15px;
+    }
+
+    .horario {
+    	text-align: center;
+    	margin: 20px;
+    }
+
+    table {
+    	margin: 10px auto 20px auto;
+    }
+   
+}
+
+
+
